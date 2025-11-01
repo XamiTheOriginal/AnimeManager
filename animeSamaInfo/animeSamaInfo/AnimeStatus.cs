@@ -4,5 +4,6 @@ public enum AnimeStatus
 {
     Seen,
     Watching,
-    Favorite
+    Favorite,
+    Watchlist
 }
