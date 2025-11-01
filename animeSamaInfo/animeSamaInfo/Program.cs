@@ -1,20 +1,15 @@
-﻿// Dans Program.cs
-
-using animeSamaInfo;
-// Assurez-vous d'avoir bien instancié le manager :
+﻿using animeSamaInfo;
 AnimeManager manager = new AnimeManager(); 
 
 Console.WriteLine("\n--- LISTE COMPLÈTE DU CATALOGUE (Lecture de la DB) ---");
 
-// 1. Appel de la méthode sans paramètre
 List<Animes> catalogueComplet = manager.ListAnimes(); 
 
 if (catalogueComplet.Any())
 {
     Console.WriteLine($"Total d'animes trouvés : {catalogueComplet.Count}");
     Console.WriteLine("------------------------------------------");
-
-    // 2. Boucle pour afficher chaque anime
+    
     foreach (var anime in catalogueComplet)
     {
         // Utilisation des propriétés de l'objet Animes
