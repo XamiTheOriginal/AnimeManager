@@ -1,4 +1,4 @@
-﻿namespace animeSamaInfo;
+﻿namespace animeSamaInfo.Backend;
 
 public enum AnimeStatus
 {
