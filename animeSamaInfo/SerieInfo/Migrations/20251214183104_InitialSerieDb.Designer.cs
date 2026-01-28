@@ -2,32 +2,31 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using animeSamaInfo;
-using animeSamaInfo.Backend;
+using SerieInfo.Backend;
 
 #nullable disable
 
 namespace animeSamaInfo.Migrations
 {
-    [DbContext(typeof(AnimeDbContext))]
-    partial class AnimeDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(SerieDbContext))]
+    [Migration("20251214183104_InitialSerieDb")]
+    partial class InitialSerieDb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.0");
 
-            modelBuilder.Entity("animeSamaInfo.Animes", b =>
+            modelBuilder.Entity("SerieInfo.Backend.Serie", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("AddDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("AnimeTypes")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("EpisodeSeen")
@@ -42,9 +41,11 @@ namespace animeSamaInfo.Migrations
                     b.Property<int>("SeasonSeen")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
+                    b.Property<string>("SerieTypes")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Studio")
                         .HasColumnType("TEXT");
@@ -54,7 +55,7 @@ namespace animeSamaInfo.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Animes");
+                    b.ToTable("Serie");
                 });
 #pragma warning restore 612, 618
         }

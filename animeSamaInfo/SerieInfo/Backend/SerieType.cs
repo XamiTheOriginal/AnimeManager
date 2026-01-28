@@ -1,6 +1,6 @@
-﻿namespace animeSamaInfo.Backend;
+﻿namespace SerieInfo.Backend;
 
-public enum AnimeType
+public enum SerieType
 {
     Shonen,     
     Shojo,      

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "animeSamaInfo", "animeSamaInfo\animeSamaInfo.csproj", "{9B38142C-DC4A-4B1A-89D8-FF1217DB4168}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerieInfo", "SerieInfo\SerieInfo.csproj", "{9B38142C-DC4A-4B1A-89D8-FF1217DB4168}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

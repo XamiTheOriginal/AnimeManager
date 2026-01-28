@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace animeSamaInfo.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class InitialSerieDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Animes",
+                name: "Serie",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -23,13 +23,13 @@ namespace animeSamaInfo.Migrations
                     NumberSeason = table.Column<int>(type: "INTEGER", nullable: false),
                     EpisodeSeen = table.Column<int>(type: "INTEGER", nullable: false),
                     SeasonSeen = table.Column<int>(type: "INTEGER", nullable: false),
-                    Status = table.Column<string>(type: "TEXT", nullable: false),
-                    AnimeTypes = table.Column<string>(type: "TEXT", nullable: true),
+                    Status = table.Column<int>(type: "INTEGER", nullable: false),
+                    SerieTypes = table.Column<string>(type: "TEXT", nullable: true),
                     AddDate = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Animes", x => x.Id);
+                    table.PrimaryKey("PK_Serie", x => x.Id);
                 });
         }
 
@@ -37,7 +37,7 @@ namespace animeSamaInfo.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Animes");
+                name: "Serie");
         }
     }
 }
